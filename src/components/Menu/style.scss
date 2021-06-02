@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+@use 'sass:math';
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: vars.$menuWidth;
+  padding: vars.$gutter;
+  background-color: vars.$darkColor;
+  height: 100vh;
+
+  @media (max-width: vars.$small) {
+    width: vars.$smallMenuWidth;
+    font-size: 0.85em;
+  }
+
+  &-item {
+    display: block;
+    color: vars.$lightColor;
+    padding: math.div(vars.$gutter, 2) 0; 
+  }
+
+  &--active {
+    color: vars.$primaryLightColor;
+    box-shadow: inset -3px 0 0 vars.$primaryLightColor;
+  }
+}

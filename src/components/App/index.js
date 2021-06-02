@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Menu from 'src/containers/Menu';
+import Home from 'src/components/Home';
 
 import './style.scss';
 
 const App = () => (
-  <div>
+  <div className="app">
     <Menu />
+    <Home />
   </div>
 );
 

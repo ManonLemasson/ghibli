@@ -1,0 +1,9 @@
+@use 'src/styles/vars';
+
+.app{
+  padding-left: vars.$menuWidth;
+
+  @media (max-width: vars.$small) {
+    padding-left: vars.$smallMenuWidth;
+  }
+}
