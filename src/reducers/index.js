@@ -1,7 +1,8 @@
-import data from 'src/data';
+import data, { images } from 'src/data';
 
 const initialState = {
   moviesList: data,
+  images: images,
 };
 
 const reducer = (state = initialState, action = {}) => {

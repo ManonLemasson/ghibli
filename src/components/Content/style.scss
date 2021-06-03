@@ -1,0 +1,22 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+@use 'sass:math';
+
+.content {
+  padding: vars.$gutter;
+
+  &-title {
+    font-size: 2em;
+    color: vars.$primaryColor;
+    margin-bottom: vars.$gutter;
+    padding-bottom: math.div(vars.$gutter, 4);
+    border-bottom: 1px solid color.scale(vars.$primaryColor, $alpha: -80%);
+    text-align: center;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

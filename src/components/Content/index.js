@@ -5,10 +5,10 @@ import Card from 'src/components/Card';
 import './style.scss';
 
 const Content = ({ moviesList }) => (
-  <section>
-    <h1>Ghibli movies</h1>
+  <section className="content">
+    <h1 className="content-title">Ghibli movies</h1>
     {moviesList && (
-      <div>
+      <div className="content-list">
         {moviesList.map((movie) => (
           <Card key={movie.id} {...movie} />
         ))}

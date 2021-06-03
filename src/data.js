@@ -50,3 +50,14 @@ export default [
     url: 'https://ghibliapi.herokuapp.com/films/12cfb892-aac0-4c5b-94af-521852e46d6a',
   },
 ];
+
+export const images = [
+  {
+    url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCastle_in_the_Sky&psig=AOvVaw2A_7fBOWF6Of-9OU46fGd8&ust=1622824547270000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICrltny-_ACFQAAAAAdAAAAABAD',
+    name: 'Castle in the Sky',
+  },
+  {
+    url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGrave_of_the_Fireflies&psig=AOvVaw3uYFSI8-QrE8pkSsqTSkTC&ust=1622824888858000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJit8fzz-_ACFQAAAAAdAAAAABAD',
+    name: 'Grave of the Fireflies',
+  },
+];
