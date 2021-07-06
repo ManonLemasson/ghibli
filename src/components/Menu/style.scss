@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 @use 'sass:math';
 
-.menu {
+/* .menu {
   position: fixed;
   left: 0;
   top: 0;
@@ -25,4 +25,44 @@
     color: vars.$primaryLightColor;
     box-shadow: inset -3px 0 0 vars.$primaryLightColor;
   }
+} */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: vars.$primaryColor;
+  width: vars.$menuWidth;
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+
+  &-open{
+    transform: translateX(0);
+  }
+  
+  @media (max-width: vars.$small) {
+    width: 100%;
+  }
+
+  &-item {
+    padding: 2rem 0;
+    font-weight: bold;
+    color: vars.$lightColor};
+    text-decoration: none;
+    transition: color 0.3s linear;
+    
+    @media (max-width: vars.$small) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      color: vars.$lightColor;
+    }
 }

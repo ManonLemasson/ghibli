@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import Menu from 'src/components/Menu';
+import Burger from 'src/components/Burger';
 import { toggleMenu } from 'src/actions';
 
 const mapStateToProps = (state) => ({
-  moviesList: state.moviesList,
   menuIsOpen: state.menuIsOpen,
 });
 
@@ -13,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default connect(mapStateToProps, mapDispatchToProps)(Burger);

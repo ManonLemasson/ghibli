@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'src/components/Card';
+import { findImageUrl } from 'src/selectors';
 
 import './style.scss';
 
-const Content = ({ moviesList }) => (
+const Content = ({ moviesList, pictures }) => (
   <section className="content">
     <h1 className="content-title">Ghibli movies</h1>
     {moviesList && (
       <div className="content-list">
         {moviesList.map((movie) => (
-          <Card key={movie.id} {...movie} />
+          <Card key={movie.id} {...movie} pictureUrl={(findImageUrl(pictures, movie.title)).url} />
         ))}
       </div>
     )}
@@ -23,6 +24,11 @@ Content.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ),
+  pictures: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 Content.defaultProps = {
