@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './style.scss';
 
@@ -11,18 +12,23 @@ const Card = ({
   director,
   release_date,
   running_time,
+  id,
 }) => (
-  <article className="card">
-    <img className="card-img" src={pictureUrl} alt="movie" />
-    <div className="card-content">
-      <h2 className="card-title">{title}</h2>
-      <div className="card-info">
-        <p className="card-desc">{director} - {release_date} - {running_time} min</p>
-        <p className="card-score">Score : <span>{rt_score} %</span></p>
+  <Link to={id}>
+    <article className="card">
+      <img className="card-img" src={pictureUrl} alt="movie" />
+      <div className="card-content">
+        <h2 className="card-title">{title}</h2>
+        <ul className="card-info">
+          <li className="card-desc">{director}</li>
+          <li className="card-desc">{release_date}</li>
+          <li className="card-desc">{running_time} min</li>
+          <li className="card-desc">Score : <span>{rt_score} %</span></li>
+        </ul>
       </div>
       <div className="card-link">See more</div>
-    </div>
-  </article>
+    </article>
+  </Link>
 );
 
 Card.propTypes = {
@@ -32,6 +38,7 @@ Card.propTypes = {
   director: PropTypes.string.isRequired,
   release_date: PropTypes.string.isRequired,
   running_time: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Card;

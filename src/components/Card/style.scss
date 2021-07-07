@@ -5,13 +5,17 @@
 .card {
   border-radius:1rem;
   border: 1px solid vars.$darkColor;
-  // width: calc(50% - #{math.div(vars.$gutter, 2)});
-  width: 20rem;
+  width: 25rem;
   height: 40rem;
   margin-top: vars.$gutter;
   // overflow: hidden;
   position: relative;
+  box-shadow: 2px 2px 5px 2px black;
 
+  @media (max-width: vars.$small) {
+    width: 17rem;
+    height: 30rem;
+  }
 
   &-img{
     width: 100%;
@@ -22,19 +26,18 @@
 
   &-content {
     padding: math.div(vars.$gutter, 2);
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%);
-
+    width: 100%;
   }
 
   &-info {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-self: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -30%);
   }
 
   &-title {
@@ -44,48 +47,44 @@
     border-radius: 5px;
     padding: vars.$gutter;
     margin: vars.$gutter 0;
+    box-shadow: 2px 2px 5px 2px black;
     color: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
   }
 
   &-desc {
     color: black;
     text-align: center;
     font-size: .8em;
-    margin: vars.$gutter 0;
     background-color: rgba(255, 255, 255, 0.74);
     border-radius: 5px;
     box-sizing: content-box;
-  }
-
-  &-score {
-    color: black;
-    text-align: center;
-    font-size: .8em;
-    margin: vars.$gutter 0;
-    background-color: rgba(255, 255, 255, 0.74);
-    border-radius: 5px;
+    margin: 0 math.div(vars.$gutter, 3) vars.$gutter math.div(vars.$gutter, 3);
     display: block;
-    box-sizing: content-box;
-  }
-
- /*  &-link {
-    background-color: vars.$darkColor;
-    color:vars.$lightColor;
-    display: block;
-    
     padding: math.div(vars.$gutter, 2);
-    border-radius: 10px;
-    margin: auto;
-  } */
-    &-link {
-      display: none;
-      text-align: center;
-      text-transform: uppercase;
-      color: black;
+    box-shadow: 2px 2px 5px 2px black;
+  }
 
-      :hover {
-        display: block;
-      }
-    }
-  
+  &-link {
+    visibility: hidden;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    color:vars.$lightColor;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card:hover .card-link {
+  visibility: visible;
+}
+.card:hover .card-img{
+  opacity: 0.5;
 }

@@ -60,4 +60,80 @@ export const images = [
     url: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg',
     name: 'Grave of the Fireflies',
   },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/0/02/My_Neighbor_Totoro_-_Tonari_no_Totoro_%28Movie_Poster%29.jpg',
+    name: 'My Neighbor Totoro',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg',
+    name: 'Kiki\'s Delivery Service',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/46/OYpost.jpg/220px-OYpost.jpg',
+    name: 'Only Yesterday',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/f/fc/Porco_Rosso_%28Movie_Poster%29.jpg',
+    name: 'Porco Rosso',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Pompokoposter.jpg/220px-Pompokoposter.jpg',
+    name: 'Pom Poko',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/9/93/Whisper_of_the_Heart_%28Movie_Poster%29.jpg',
+    name: 'Whisper of the Heart',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/8/8c/Princess_Mononoke_Japanese_poster.png',
+    name: 'Princess Mononoke',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/My_Neighbors_the_Yamadas_%281999%29.jpg/220px-My_Neighbors_the_Yamadas_%281999%29.jpg',
+    name: 'My Neighbors the Yamadas',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png',
+    name: 'Spirited Away',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Cat_Returns.jpg/220px-Cat_Returns.jpg',
+    name: 'The Cat Returns',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Howls-moving-castleposter.jpg',
+    name: 'Howl\'s Moving Castle',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/e/e5/Gedo6sn.jpg',
+    name: 'Tales from Earthsea',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/9/9d/Ponyo_%282008%29.png',
+    name: 'Ponyo',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/e/e7/Karigurashi_no_Arrietty_poster.png',
+    name: 'Arrietty',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/c/c9/From_Up_on_Poppy_Hill.png',
+    name: 'From Up on Poppy Hill',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg',
+    name: 'The Wind Rises',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/6/68/The_Tale_of_the_Princess_Kaguya_%28poster%29.jpg',
+    name: 'The Tale of the Princess Kaguya',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/a/a7/When_Marnie_Was_There.png',
+    name: 'When Marnie Was There',
+  },
+  {
+    url: 'https://upload.wikimedia.org/wikipedia/en/f/fe/The_Red_Turtle.png',
+    name: 'The Red Turtle',
+  },
 ];

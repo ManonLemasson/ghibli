@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Menu from 'src/components/Menu';
-import { toggleMenu } from 'src/actions';
+import { closeMenu } from 'src/actions';
 
 const mapStateToProps = (state) => ({
   moviesList: state.moviesList,
@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toggleMenu: () => {
-    dispatch(toggleMenu());
+  closeMenu: () => {
+    dispatch(closeMenu());
   },
 });
 

@@ -1,15 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 
-const Menu = ({ moviesList, menuIsOpen }) => (
+const Menu = ({ moviesList, menuIsOpen, closeMenu }) => (
   <nav className={classNames('menu', { 'menu-open': menuIsOpen })}>
-    <a href="" className="menu-item">Home</a>
+    <NavLink
+      to="/"
+      exact
+      className="menu-item"
+      activeClassName="menu-item--active"
+      onClick={() => closeMenu()}
+    >
+      Home
+    </NavLink>
     {moviesList.map((movie) => (
-      <a href="" key={movie.id} className="menu-item">
+      <NavLink
+        to="/{movie.id}"
+        exact
+        key={movie.id}
+        className="menu-item"
+        activeClassName="menu-item--active"
+        onClick={() => closeMenu()}
+      >
         {movie.title}
-      </a>
+      </NavLink>
     ))}
   </nav>
 );
@@ -22,6 +38,7 @@ Menu.propTypes = {
     }),
   ).isRequired,
   menuIsOpen: PropTypes.bool.isRequired,
+  closeMenu: PropTypes.func.isRequired,
 };
 
 export default Menu;

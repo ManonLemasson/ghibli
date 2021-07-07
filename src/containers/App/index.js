@@ -1,12 +1,17 @@
 import { connect } from 'react-redux';
 import App from 'src/components/App';
-import { closeMenu } from 'src/actions';
+import { closeMenu, fetchMovies } from 'src/actions';
 
-const mapStateToProps = null;
+const mapStateToProps = (state) => ({
+  loading: state.loading,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   closeMenu: () => {
     dispatch(closeMenu());
+  },
+  fetchMovies: () => {
+    dispatch(fetchMovies());
   },
 });
 

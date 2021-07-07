@@ -1,52 +1,25 @@
 @use 'src/styles/vars';
 @use 'sass:math';
 
-/* .menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: vars.$menuWidth;
-  padding: vars.$gutter;
-  background-color: vars.$darkColor;
-  height: 100vh;
-
-  @media (max-width: vars.$small) {
-    width: vars.$smallMenuWidth;
-    font-size: 0.85em;
-  }
-
-  &-item {
-    display: block;
-    color: vars.$lightColor;
-    padding: math.div(vars.$gutter, 2) 0; 
-  }
-
-  &--active {
-    color: vars.$primaryLightColor;
-    box-shadow: inset -3px 0 0 vars.$primaryLightColor;
-  }
-} */
-
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: vars.$primaryColor;
   width: vars.$menuWidth;
-  height: 100vh;
   text-align: left;
-  padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
+  padding: vars.$gutter * 2.5 2rem;
 
   &-open{
     transform: translateX(0);
   }
   
-  @media (max-width: vars.$small) {
+  @media (max-width: vars.$medium) {
     width: 100%;
   }
 
@@ -57,7 +30,7 @@
     text-decoration: none;
     transition: color 0.3s linear;
     
-    @media (max-width: vars.$small) {
+    @media (max-width: vars.$medium) {
       font-size: 1.5rem;
       text-align: center;
     }
