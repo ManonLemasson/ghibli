@@ -1,0 +1,70 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+
+.movie {
+  padding: vars.$gutter * 3;
+  min-height: 100vh;
+
+  @media (max-width: vars.$small) {
+    padding: vars.$gutter;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: vars.$gutter*2;
+    @media (max-width: vars.$small) {
+      font-size: 1.5rem;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: vars.$gutter*2;
+  }
+
+  &-desc {
+    text-align: center;
+    margin-bottom: vars.$gutter*2;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-info {
+    display: inline-block;
+    text-align: left;
+    &-item{
+      margin-bottom: vars.$gutter;
+    }
+    &-item strong{
+      font-weight: bold;
+    }
+  }
+
+  &-block-info {
+    text-align: center;
+  }
+
+  &-people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &-people-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: vars.$gutter*2;
+    border-top: 1px solid color.scale(vars.$lightColor, $alpha: -50%);
+    padding-top: vars.$gutter;
+  }
+}

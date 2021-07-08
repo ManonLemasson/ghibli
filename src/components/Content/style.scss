@@ -7,10 +7,10 @@
 
   &-title {
     font-size: 2em;
-    color: vars.$primaryColor;
+    color: vars.$lightColor;
     margin-bottom: vars.$gutter;
     padding-bottom: math.div(vars.$gutter, 4);
-    border-bottom: 1px solid color.scale(vars.$primaryColor, $alpha: -80%);
+    border-bottom: 1px solid color.scale(vars.$lightColor, $alpha: -50%);
     text-align: center;
     @media (max-width: vars.$small) {
       font-size: 1.3em;

@@ -18,3 +18,14 @@ export const saveMovies = (movies) => ({
   type: SAVE_MOVIES,
   movies,
 });
+
+export const FETCH_PEOPLE = 'FETCH_PEOPLE';
+export const fetchPeople = () => ({
+  type: FETCH_PEOPLE,
+});
+
+export const SAVE_PEOPLE = 'SAVE_PEOPLE';
+export const savePeople = (people) => ({
+  type: SAVE_PEOPLE,
+  people,
+});

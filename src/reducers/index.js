@@ -1,11 +1,17 @@
-import data, { images } from 'src/data';
-import { TOGGLE_MENU, CLOSE_MENU, SAVE_MOVIES } from '../actions';
+import { images } from 'src/data';
+import {
+  TOGGLE_MENU,
+  CLOSE_MENU,
+  SAVE_MOVIES,
+  SAVE_PEOPLE,
+} from '../actions';
 
 const initialState = {
-  moviesList: data,
+  moviesList: null,
   pictures: images,
   menuIsOpen: false,
   loading: true,
+  peopleList: null,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -24,6 +30,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         moviesList: action.movies,
+      };
+    case SAVE_PEOPLE:
+      return {
+        ...state,
+        peopleList: action.people,
         loading: false,
       };
     default:

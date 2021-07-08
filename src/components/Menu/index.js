@@ -17,7 +17,7 @@ const Menu = ({ moviesList, menuIsOpen, closeMenu }) => (
     </NavLink>
     {moviesList.map((movie) => (
       <NavLink
-        to="/{movie.id}"
+        to={`/movie/${movie.id}`}
         exact
         key={movie.id}
         className="menu-item"

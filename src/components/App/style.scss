@@ -1,5 +1,19 @@
 @use 'src/styles/vars';
+@use 'sass:math';
 
-.app{
-  padding: vars.$gutter;
+.button-go-back{
+  box-shadow: 1px 1px 5px 2px vars.$lightColor;
+  color: vars.$lightColor;
+  background: linear-gradient(90deg, vars.$darkColor, vars.$primaryLightColor);
+  display: block;
+  margin: vars.$gutter auto;
+  text-align: center;
+  padding: math.div(vars.$gutter, 2);
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  
+  &:hover{
+    opacity: 0.5;
+  }
 }

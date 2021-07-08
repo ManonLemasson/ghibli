@@ -14,7 +14,7 @@ const Card = ({
   running_time,
   id,
 }) => (
-  <Link to={id}>
+  <Link to={`/movie/${id}`}>
     <article className="card">
       <img className="card-img" src={pictureUrl} alt="movie" />
       <div className="card-content">
