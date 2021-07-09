@@ -10,3 +10,14 @@ export function findMovie(moviesList, searchedSlug) {
 export function filterPeople(peopleList, movieUrl) {
   return peopleList.filter((people) => people.films[0] === movieUrl);
 }
+
+export const filterMoviesByQuery = (moviesList, query) => {
+  if (!query) {
+    return moviesList;
+  }
+
+  return moviesList.filter((movie) => {
+    const movieName = movie.title.toLowerCase();
+    return movieName.includes(query.toLowerCase());
+  });
+};

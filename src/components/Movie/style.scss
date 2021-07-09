@@ -4,6 +4,7 @@
 .movie {
   padding: vars.$gutter * 3;
   min-height: 100vh;
+  color: vars.$lightColor;
 
   @media (max-width: vars.$small) {
     padding: vars.$gutter;

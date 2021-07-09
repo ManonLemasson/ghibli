@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import Content from 'src/components/Content';
+import { filterMoviesByQuery } from 'src/selectors';
 
 const mapStateToProps = (state) => ({
-  moviesList: state.moviesList,
+  moviesList: filterMoviesByQuery(state.moviesList, state.searchValue),
   pictures: state.pictures,
 });
 

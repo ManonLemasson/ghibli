@@ -5,12 +5,26 @@
 .content {
   padding: vars.$gutter;
 
+  &-filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid color.scale(vars.$lightColor, $alpha: -50%);
+    margin: vars.$gutter;
+    padding-bottom: vars.$gutter;
+    @media (max-width: vars.$small) {
+      flex-direction: column;
+    }
+  }
+
+  &-results{
+    text-align: center;
+    color: vars.$lightColor;
+  }
+
   &-title {
     font-size: 2em;
     color: vars.$lightColor;
-    margin-bottom: vars.$gutter;
-    padding-bottom: math.div(vars.$gutter, 4);
-    border-bottom: 1px solid color.scale(vars.$lightColor, $alpha: -50%);
     text-align: center;
     @media (max-width: vars.$small) {
       font-size: 1.3em;

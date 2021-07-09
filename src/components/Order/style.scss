@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+@use 'sass:math';
+
+.order{
+  border: none;
+  border-radius: 5px;
+  padding: math.div(vars.$gutter, 2);
+  @media (max-width: vars.$small) {
+    margin-bottom: math.div(vars.$gutter, 2);
+    margin-top: vars.$gutter;
+  }
+}

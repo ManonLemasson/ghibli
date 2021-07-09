@@ -1,0 +1,31 @@
+@use 'src/styles/vars';
+@use 'sass:math';
+
+.searchForm{
+  display: flex;
+  @media (max-width: vars.$small) {
+    flex-direction: column;
+  }
+
+  &-input{
+    border: none;
+    border-radius: 5px;
+    padding: math.div(vars.$gutter, 2);
+    margin-right: math.div(vars.$gutter, 2);
+    @media (max-width: vars.$small) {
+      margin-right: 0;
+      margin-bottom: math.div(vars.$gutter, 2);
+      margin-top: math.div(vars.$gutter, 2);
+    }
+  }
+
+  &-button{
+    border: none;
+    border-radius: 5px;
+    padding: math.div(vars.$gutter, 2);
+    @media (max-width: vars.$small) {
+      width: 40%;
+      margin: auto;
+    }
+  }
+}

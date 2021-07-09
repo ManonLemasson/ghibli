@@ -4,6 +4,8 @@ import {
   CLOSE_MENU,
   SAVE_MOVIES,
   SAVE_PEOPLE,
+  CHANGE_SEARCH_VALUE,
+  CHANGE_ORDER_VALUE,
 } from '../actions';
 
 const initialState = {
@@ -12,6 +14,8 @@ const initialState = {
   menuIsOpen: false,
   loading: true,
   peopleList: null,
+  searchValue: '',
+  orderValue: '',
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -36,6 +40,16 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         peopleList: action.people,
         loading: false,
+      };
+    case CHANGE_SEARCH_VALUE:
+      return {
+        ...state,
+        searchValue: action.newValue,
+      };
+    case CHANGE_ORDER_VALUE:
+      return {
+        ...state,
+        orderValue: action.newValue,
       };
     default:
       return state;

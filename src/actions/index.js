@@ -29,3 +29,15 @@ export const savePeople = (people) => ({
   type: SAVE_PEOPLE,
   people,
 });
+
+export const CHANGE_SEARCH_VALUE = 'CHANGE_SEARCH_VALUE';
+export const changeSearchValue = (newValue) => ({
+  type: CHANGE_SEARCH_VALUE,
+  newValue,
+});
+
+export const CHANGE_ORDER_VALUE = 'CHANGE_ORDER_VALUE';
+export const changeOrderValue = (newValue) => ({
+  type: CHANGE_ORDER_VALUE,
+  newValue,
+});
