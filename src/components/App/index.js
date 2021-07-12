@@ -12,6 +12,7 @@ import Menu from 'src/containers/Menu';
 import Burger from 'src/containers/Burger';
 import Home from 'src/components/Home';
 import Movie from 'src/containers/Movie';
+import Footer from 'src/components/Footer';
 import Loading from './Loading';
 
 import './style.scss';
@@ -57,6 +58,7 @@ const App = ({
         <Burger />
         <Menu />
       </div>
+      <Footer />
     </div>
   );
 };
