@@ -8,7 +8,7 @@
   height: 25rem;
   margin-top: vars.$gutter;
   box-shadow: 2px 2px 5px 2px black;
-  background-color: vars.$lightColor;
+  background-color: rgba(214, 214, 214, 0.486);
 
   &-content {
     padding: math.div(vars.$gutter, 2);
@@ -31,7 +31,7 @@
     margin: vars.$gutter 0;
     box-shadow: 2px 2px 5px 2px black;
     color: vars.$lightColor;
-    background: linear-gradient(90deg, vars.$darkColor, vars.$primaryLightColor);
+    background-color: vars.$darkColor;
   }
 
   &-desc {
@@ -44,6 +44,6 @@
     display: block;
     padding: math.div(vars.$gutter, 2);
     box-shadow: 2px 2px 5px 2px black;
-    background: linear-gradient(90deg, vars.$darkColor, vars.$primaryLightColor);
+    background-color: vars.$primaryLightColor;
   }
 }

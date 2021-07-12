@@ -16,7 +16,11 @@ import Loading from './Loading';
 
 import './style.scss';
 
-const App = ({ closeMenu, loading, fetchMovies }) => {
+const App = ({
+  closeMenu,
+  loading,
+  fetchMovies,
+}) => {
   const node = useRef();
   useOnClickOutside(node, () => closeMenu());
 
