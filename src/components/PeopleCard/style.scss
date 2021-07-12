@@ -5,7 +5,7 @@
   border-radius:1rem;
   border: 1px solid vars.$darkColor;
   width: 17rem;
-  height: 25rem;
+  height: 21rem;
   margin-top: vars.$gutter;
   box-shadow: 2px 2px 5px 2px black;
   background-color: rgba(214, 214, 214, 0.486);
@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    margin-top: vars.$gutter;
   }
 
   &-title {
